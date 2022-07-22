@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RodriguezCharlie</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <style>
+        div[class="planes"] {
+            background-color: #F1F1F1;
+            border: 1px solid #333;
+            margin-left: 200px;
+            margin-right: 200px;
+            margin-bottom: 30px;
+            padding: 30px;
+            border-radius: 5px;
+            color: black;
+        }
+
+        .btns {
+            background: #414141;
+            margin-top: 10px;
+            padding: 10px;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .btnp {
+            display: flex;
+            justify-content: center;
+            padding: 10px;
+
+        }
+
+        .redes ul {
+            display: flex;
+            flex-direction: row;
+            align-content: center;
+        }
+
+        .redes li {
+            padding-right: 5px;
+            text-decoration: none;
+            list-style: none;
+        }
+
+        #membresias {
+            background: rgba(0, 0, 0, 0.7) url('img/banner.webp');
+            background-blend-mode: darken;
+            background-size: cover;
+            height: 500px;
+            color: white;
+            font-size: 24px;
+            padding: 2rem 0rem 0rem 2rem;
+        }
+
+        .contenedor {
+            padding-top: 20px;
+            text-align: justify;
+
+        }
+
+        .btncita {
+            display: flex;
+            justify-content: left;
+            padding: 5px;
+
+        }
+
+        #interac {
+            display: flex;
+            flex-direction: row;
+            text-align: center;
+            justify-content: center;
+            padding: 10px;
+
+        }
+
+        h3 {
+            padding: 10px;
+            text-align: center;
+        }
+
+        .btnatc {
+            background: #4CAF50;
+            margin-top: 10px;
+            padding: 10px;
+            color: #fff;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h2>OLYMPIA</h2>
+        <nav class="nav">
+            <a href="GomezCristopher.html">Home</a>
+            <a href="RodriguezCharlie.html">Membresías</a>
+            <a href="MarquezJean.html">Productos</a>
+            <a href="PastuizacaWashington.html">Beneficios</a>
+            <a href="CoelloNayeli.html">Sedes</a>
+            <a href="TumbacoPaul.html">Contacto</a>
+        </nav>
+    </header>
+
+    <main>
+        <div id="membresias">
+            <h1>MEMBRESIAS</h1>
+            <h2>Planes y precios para todas las personas</h2>
+            <div class="btncita">
+                <a href="FormRodriguez.html" class="btnatc">AGENDA TU CITA</a>
+            </div>
+        </div>
+
+        <section class="contenedor">
+            <div class="planes">
+                <h2>PERSONAL TRAINING</h2>
+                <ul>
+                    <li><b>Acceso a un entrenador:</b> <br>
+                        Puedes elegir entre más de 35 entrenadores y personalizar el plan a tu gusto.</li>
+                    <li><b>Acceso al primer piso de el gym:</b> <br>
+                        Acceso a mas de 40 maquinas que estaran a tu disposición.</li>
+                    <li><b>Descuentos en la cafetería:</b> <br>
+                        El la cafeteria de Olympia gym encontraras los mejores productos alimenticios.</li>
+                </ul>
+                <div class="btnp">
+                    <a href="#" class="btns">SUSCRIBIRME</a>
+                </div>
+            </div>
+
+            <div class="planes">
+                <h2>BOXEO</h2>
+                <ul>
+                    <li><b>Clases de boxeo con horarios personalizados:</b> <br>
+                        Podras elegir a tu entrenador y el horario que mas se ajuste para poder
+                        entrenar y convertirte en el mejor.</li>
+                    <li><b>Acceso a maquinas de cardio:</b> <br>
+                        Son un beneficio único para las personas que elijan el plan de boxeo.</li>
+                    <li><b>Descuentos en la cafetería:</b> <br>
+                        El la cafeteria de Olympia gym encontraras los mejores productos alimenticios.</li>
+                </ul>
+                <div class="btnp">
+                    <a href="#" class="btns">SUSCRIBIRME</a>
+                </div>
+            </div>
+
+            <div class="planes">
+                <h2>PREMIUM PLAN</h2>
+                <ul>
+                    <li><b>Clases de boxeo con horarios personalizados:</b> <br>
+                        Podras elegir a tu entrenador y el horario que mas se ajuste para poder
+                        entrenar y convertirte en el mejor.</li>
+                    <li><b>Acceso a maquinas de cardio:</b> <br>
+                        Son un beneficio único para las personas que elijan el plan de boxeo.</li>
+                    <li><b>Descuentos en la cafetería:</b> <br>
+                        El la cafeteria de Olympia gym encontraras los mejores productos alimenticios.</li>
+                </ul>
+                <div class="btnp">
+                    <a href="#" class="btns">SUSCRIBIRME</a>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <h3>RUTINA DE EJERCICIOS CON MANCUERNAS</h3>
+            <div id="interac">
+                <a href="#" id="link1" onmouseover="fase1(this)" onmouseout="fase2(this)">Paso 1</a>
+                <img id="imagen1" src="img/1.png" alt="" />
+
+                <a href="#" id="link2" onmouseover="fase3(this)" onmouseout="fase4(this)">Paso 1</a>
+                <img id="imagen2" src="img/3.png" alt="" />
+
+                <a href="#" id="link3" onmouseover="fase5(this)" onmouseout="fase6(this)">Paso 1</a>
+                <img id="imagen3" src="img/5.png" alt="" />
+            </div>
+
+
+    
+
+
+        </footer>
+    </main>
+
+    <script>
+        function fase1(nodoA) {
+            //1. obtener elementos a manipular
+            let img = document.getElementById('imagen1');
+
+            //img.setAttribute("src","img/on.jpg"),
+            img.src = "img/2.png";
+
+            nodoA.textContent = 'Paso 2';
+
+        }
+
+        function fase2(nodoA) {
+            //1. obtener elementos a manipular
+            let img = document.getElementById('imagen1');
+            img.src = "img/1.png";
+            nodoA.textContent = 'Paso 1';
+
+        }
+
+        function fase3(nodoA) {
+            //1. obtener elementos a manipular
+            let img = document.getElementById('imagen2');
+
+            //img.setAttribute("src","img/on.jpg"),
+            img.src = "img/4.png";
+
+            nodoA.textContent = 'Paso 2';
+
+        }
+
+        function fase4(nodoA) {
+            //1. obtener elementos a manipular
+            let img = document.getElementById('imagen2');
+            img.src = "img/3.png";
+            nodoA.textContent = 'Paso 1';
+
+        }
+
+        function fase5(nodoA) {
+            //1. obtener elementos a manipular
+            let img = document.getElementById('imagen3');
+
+            //img.setAttribute("src","img/on.jpg"),
+            img.src = "img/6.png";
+
+            nodoA.textContent = 'Paso 2';
+
+        }
+
+        function fase6(nodoA) {
+            //1. obtener elementos a manipular
+            let img = document.getElementById('imagen3');
+            img.src = "img/5.png";
+            nodoA.textContent = 'Paso 1';
+
+        }
+
+    </script>
+</body>
+
+</html>

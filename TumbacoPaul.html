@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TumbacoPaul</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <style>
+        .barra {
+            display: flex;
+            flex-direction: row;
+            align-content: center;
+            justify-content: space-between;
+            padding: 16px;
+        }
+
+        footer{
+            text-align: center;
+
+        }
+        .Titulo{
+            text-align: center;
+            font-size: 45pt;
+            padding-top: 8rem;
+        }
+        .subtitulo{
+            text-align: center;
+            font-size: 12pt;
+            text-decoration: none;
+            padding-top: 10px;
+            padding-bottom: 5rem;
+        }
+        #Formulario{
+            padding-top: 10px;
+            padding-bottom: 5rem;
+
+        }
+        .Frase{
+            padding-top: 1rem;
+            font-size: 10px;
+        }
+        .form{
+            display: flex;
+            padding-top: 5px;
+            padding-bottom: 10px;
+            align-items: center;
+            
+        }
+        label.form{
+            padding-left: 45rem;
+        }
+        input.form{
+            margin-left: 45rem;
+            margin-bottom: 5px;
+            width: 400px;
+            
+        }
+        textarea.form{
+            margin-left: 45rem;
+            margin-bottom: 15px;
+            width: 400px;
+            
+        }
+
+        input.boton{
+            padding-left: 20px;
+        }
+        .fondo{
+            background-image:url(img/wallpaperbetter.com_1920x1080.jpg);
+            
+            height: 450px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+            opacity: 75%;
+        }
+        p{
+            padding: 15px;
+            padding-bottom: 20px;
+            text-align: center;
+        }
+        input[type=submit]{
+            display: flex;
+            padding-top: 5px;
+            padding-bottom: 10px;
+            align-items: center;
+            margin-left: 45rem;
+            width:90px;
+        }
+    </style>
+    
+</head>
+    <body>
+        <main>
+        <header class="barra">
+            <h2>OLYMPIA</h2>
+                <nav class="nav">
+                    <a href="GomezCristopher.html">Home</a>
+                    <a href="RodriguezCharlie.html">Membresías</a>
+                    <a href="MarquezJean.html">Productos</a>
+                    <a href="PastuizacaWashington.html">Beneficios</a>
+                    <a href="CoelloNayeli.html">Sedes</a>
+                    <a href="TumbacoPaul.html">Contacto</a>
+                </nav>
+        </header>
+            <div class="fondo">
+                <h1 class="Titulo">CONTACTA CON NOSOTROS</h1>
+                <h3 class="subtitulo">Si tienes alguna duda puede encontrarnos con nuestros enlaces o registrarse en el siguiente formulario</h3>
+            </div>  
+            <section>
+                <h6 style="font-size: 15px;">REGRISTRATE AQUI</h6>
+                <form onsubmit="return validar()">
+                    <label class="form" for="nombre">Nombre</label>
+                    <input class="form" type="text" name="nombre" id="nombre" />
+                    <label class="form" for="apellido">Apellido</label>
+                    <input class="form" type="text" name="apellido" id="apellido" />
+                    <label class="form" for="nombre">Correo</label>
+                    <input class="form" type="text" name="correo" id="correo" />
+                    <label class="form" for="apellido">Comentarios</label>
+                    <textarea class="form" name="message" id="idTextarea" maxlength="6000" rows="7"></textarea>
+                    <div class="text-center">
+                        <input type="submit" value="Enviar" />
+                    </div>
+                </form>
+            </section>
+        <footer>
+                    <nav class="nav">
+                        <a href="GomezCristopher.html">Home</a>
+                        <a href="RodriguezCharlie.html">Membresías</a>
+                        <a href="MarquezJean.html">Productos</a>
+                        <a href="PastuizacaWashington.html">Beneficios</a>
+                        <a href="CoelloNayeli.html">Sedes</a>
+                        <a href="FormTumbaco.html">Contacto</a>
+                        <a href="TumbacoMision.html">Vision y Mision</a>
+                    </nav>
+            
+                <h6 class="Frase">No eres lo que logras, eres lo que superas </h6>
+            </footer>
+        </main>
+    </body>
+    <script type="text/javascript">
+        let cont = 0;
+        function validar() {
+            var valido = true;
+
+            var txtNombre = document.getElementById("nombre");
+            var txtApellido = document.getElementById("apellido");
+            var txtCorreo = document.getElementById("correo");
+            var texto = document.getElementById('idTextarea').value;
+
+            //Expresiones
+            var letra = /^[a-z ,.'-]+$/i;
+            var telefonoreg = /^[0-9]{10}$/g;
+            var correo = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+
+            //Nombres
+            var mensaje = '';
+            if (txtNombre.value === '') {
+                valido = false;
+                mensaje = "No ha ingresado el nombre";
+            } else if (!letra.test(txtNombre.value)) {
+                valido = false;
+                mensaje = "Solo puede ingresar letras";
+            }
+
+            //Apellidos
+            if (txtApellido.value === '') {
+                valido = false;
+                mensaje = "No ha ingresado el apellido";
+            } else if (!letra.test(txtApellido.value)) {
+                valido = false;
+                mensaje = "Solo puede ingresar letras";
+            }
+
+            if (txtCorreo.value === '') {
+                valido = false;
+                mensaje = "No ha ingresado el correo";
+            } else if (!letra.test(txtCorreo.value)) {
+                valido = false;
+                mensaje = "Solo puede ingresar letras";
+            }
+
+            if(texto==''){
+                valido = false;
+                mensaje = "El comentario esta vacio";
+            }
+               
+
+           
+
+            if (!valido)
+                alert(mensaje);
+
+            return valido;
+        }
+        </script>
+
+</html>

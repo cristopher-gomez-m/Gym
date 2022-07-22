@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gomez Cristopher</title>
+    <link rel="stylesheet" href="css/style.css" />
+
+    <style>
+        #inicio {
+            background: rgba(0, 0, 0, 0.7) url('img/gym-image.png');
+            background-blend-mode: darken;
+            background-size: cover;
+            height: 500px;
+            color: white;
+            font-size: 24px;
+            padding: 2rem 0rem 0rem 2rem;
+        }
+
+        .scroll-top-btn{
+            position: fixed;
+            width: 4rem;
+            height: 4rem;
+            bottom: 1vh;
+            right: 1vh;
+            border-radius: 50%;
+            font-size: 30px;
+            font-weight: bold;
+            background-color: #41f1f1;
+            transition: all 0.3s ease-out;
+        }
+        .scroll-top-btn:hover{
+            background-color: rgb(49, 160, 160);
+        }
+        .hidden{
+            visibility: hidden;
+            opacity: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h2>OLYMPIA</h2>
+        <nav class="nav">
+            <a href="GomezCristopher.html">Home</a>
+            <a href="RodriguezCharlie.html">Membresías</a>
+            <a href="MarquezJean.html">Productos</a>
+            <a href="PastuizacaWashington.html">Beneficios</a>
+            <a href="CoelloNayeli.html">Sedes</a>
+            <a href="TumbacoPaul.html">Contacto</a>
+        </nav>
+    </header>
+    <main>
+        <div id="inicio">
+            <h1>GYM OLIMPIA FITNESS TODAY</h1>
+        </div>
+        <hr />
+        <div id="image">
+            <h2>Planes de entrenamiento</h2>
+            <img src="img/pain.png" alt="robot ejercitandose" />
+        </div>
+        <section class="container flex text-center">
+            <div class="columna">
+                <h2>PERSONAL TRAINING</h2>
+                <p>Plan más básico contiene:</p>
+                <ul>
+                    <li>Acceso a un entrenador</li>
+                    <li>Acceso al primer piso de el gym</li>
+                    <li>Descuentos en la cafetería</li>
+                </ul>
+                <data value="10" style="font-size: 50px;">$10/ mes</data>
+                <br>
+                <a href="inscribirse.html" class="btn">SUSCRIBIRME</a>
+            </div>
+            <div class="columna">
+                <h2>BOXEO</h2>
+                <p>Plan contiene:</p>
+                <ul>
+                    <li>Clases de boxeo con horario personalizado</li>
+                    <li>Acceso a maquinas de cardio</li>
+                    <li>Descuentos en la cafetería</li>
+                </ul>
+                <data value="10" style="font-size: 50px;">$14/ mes</data>
+                <br>
+                <a href="inscribirse.html" class="btn">SUSCRIBIRME</a>
+            </div>
+            <div class="columna">
+                <h2>PREMIUM PLAN</h2>
+                <p>El plan contiene:</p>
+                <ul>
+                    <li>Acceso a todo el plan basico</li>
+                    <li>Acceso al primer piso de el gym</li>
+                    <li>Descuentos en la cafetería</li>
+                </ul>
+                <data value="10" style="font-size: 50px;">$35/ mes</data>
+                <br>
+                <a href="inscribirse.html" class="btn">SUSCRIBIRME</a>
+            </div>
+        </section>
+        <button type="button" class="scroll-top-btn hidden">&#11014;</button>
+    </main>
+    <script src="js/scrollTop.js"></script>
+</body>
+
+</html>

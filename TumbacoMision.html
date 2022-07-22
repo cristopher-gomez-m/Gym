@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TumbacoPaul</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <style>
+        .barra {
+            display: flex;
+            flex-direction: row;
+            align-content: center;
+            justify-content: space-between;
+            padding: 16px;
+        }
+
+        footer{
+            text-align: center;
+
+        }
+        .Titulo{
+            text-align: center;
+            font-size: 45pt;
+            padding-top: 8rem;
+        }
+        .subtitulo{
+            text-align: center;
+            font-size: 12pt;
+            text-decoration: none;
+            padding-top: 10px;
+            padding-bottom: 5rem;
+        }
+        #Formulario{
+            padding-top: 10px;
+            padding-bottom: 5rem;
+
+        }
+        .Frase{
+            padding-top: 1rem;
+            font-size: 10px;
+        }
+        .form{
+            display: flex;
+            padding-top: 5px;
+            padding-bottom: 10px;
+            align-items: center;
+            
+        }
+        label.form{
+            padding-left: 45rem;
+        }
+        input.form{
+            margin-left: 45rem;
+            margin-bottom: 5px;
+            width: 400px;
+            
+        }
+        textarea.form{
+            margin-left: 45rem;
+            margin-bottom: 15px;
+            width: 400px;
+            
+        }
+
+        input.boton{
+            padding-left: 20px;
+        }
+        .fondo{
+            background-image:url(img/wallpaperbetter.com_1920x1080.jpg);
+            
+            height: 250px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+            opacity: 75%;
+        }
+        p{
+            padding: 15px;
+            padding-bottom: 20px;
+            text-align: center;
+        }
+        input[type=submit]{
+            display: flex;
+            padding-top: 5px;
+            padding-bottom: 10px;
+            align-items: center;
+            margin-left: 45rem;
+            width:90px;
+        }
+        .Vision{
+            text-align: center;
+            font-weight: bold;
+            font-size: 20pt;
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+        .mision{
+            position:relative;
+            padding-top: 35px;
+            padding-left: 35rem;
+            padding-right: 35rem;
+            padding-bottom: 35px;
+            font-size: 1rem;
+            background-color:#343A40;
+            color:white;
+            
+        }
+        .f0 {
+            font-size: 0.8rem;
+            }
+        .f1 {
+            font-size: 0.9rem;
+            }
+        .f2 {
+            font-size: 1rem;
+            }
+        .f3 {
+            font-size: 1.1rem;
+            }
+        .f4 {
+            font-size: 1.2rem;
+        }
+      
+    </style>
+    
+</head>
+    <body>
+        <main>
+        <header class="barra">
+            <h2>OLYMPIA</h2>
+                <nav class="nav">
+                    <a href="GomezCristopher.html">Home</a>
+                    <a href="RodriguezCharlie.html">Membresías</a>
+                    <a href="MarquezJean.html">Productos</a>
+                    <a href="PastuizacaWashington.html">Beneficios</a>
+                    <a href="CoelloNayeli.html">Sedes</a>
+                    <a href="TumbacoPaul.html">Contacto</a>
+                </nav>
+        </header>
+            <div class="fondo">
+                <h1 class="Titulo">Nuestra mision y vision</h1>
+            </div>  
+            <section>
+                <div class="Section">
+                    <h4 class="Vision">Mision</h4>
+                    <p class="mision">
+                        Brindar a nuestros miembros una salud física y mental, para ayudarles a alcanzar sus objetivos individuales; con nuestra amplia experiencia les proveemos bienestar en base a un esmerado servicio, a un ambiente agradable y con un personal entrenado en los últimos conocimientos disponibles.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="Vision">Vision</h4>
+                    <p class="mision">
+                        Ser la mejor opción deportiva en la ciudad de Pereira, por la excelencia en sus servicios ylos altos niveles tecnológicos aplicados, liderando los procesos de servicio al cliente ybuscando siempre la mejor opción y más moderna práctica para el desarrollo físico-mentalde nuestros clientes garantizando calidad y resultados tangibles
+                    </p>
+                    <p>
+                        <button id="aumentar">Aumentar</button>
+                        <button id="disminuir">Disminuir</button>
+                      </p>
+                </div>
+                
+            </section>
+        <footer>
+                    <nav class="nav">
+                        <a href="GomezCristopher.html">Home</a>
+                        <a href="RodriguezCharlie.html">Membresías</a>
+                        <a href="MarquezJean.html">Productos</a>
+                        <a href="PastuizacaWashington.html">Beneficios</a>
+                        <a href="CoelloNayeli.html">Sedes</a>
+                        <a href="TumbacoPaul.html">Contacto</a>
+                    </nav>
+            
+                <h6 class="Frase">No eres lo que logras, eres lo que superas </h6>
+            </footer>
+        </main>
+    </body>
+    <script type="text/javascript">
+        
+        var classes = ["f0", "f1", "f2", "f3", "f4"];
+        var classIndex = 2;
+
+        document.getElementById('aumentar').addEventListener('click', function() {
+        let previousClass = classIndex;
+        classIndex++;
+        classIndex = (classIndex == classes.length) ? classes.length - 1 : classIndex;
+        changeClass(previousClass, classIndex);
+        });
+        document.getElementById('disminuir').addEventListener('click', function () {
+        let previousClass = classIndex;
+        classIndex--;
+        classIndex = (classIndex < 0) ? 0 : classIndex;
+        changeClass(previousClass, classIndex);
+        });
+
+        function changeClass(previous, next) {
+            if(previous != next) {
+                var htmlElement = document.querySelector('html')
+                htmlElement.classList.remove(classes[previous]);
+                htmlElement.classList.add(classes[next]);
+            }
+        }
+        
+        
+        
+
+
+
+        let cont = 0;
+        function validar() {
+            var valido = true;
+
+            var txtNombre = document.getElementById("nombre");
+            var txtApellido = document.getElementById("apellido");
+            var txtCorreo = document.getElementById("correo");
+            var texto = document.getElementById('idTextarea').value;
+
+            //Expresiones
+            var letra = /^[a-z ,.'-]+$/i;
+            var telefonoreg = /^[0-9]{10}$/g;
+            var correo = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+
+            //Nombres
+            var mensaje = '';
+            if (txtNombre.value === '') {
+                valido = false;
+                mensaje = "No ha ingresado el nombre";
+            } else if (!letra.test(txtNombre.value)) {
+                valido = false;
+                mensaje = "Solo puede ingresar letras";
+            }
+
+            //Apellidos
+            if (txtApellido.value === '') {
+                valido = false;
+                mensaje = "No ha ingresado el apellido";
+            } else if (!letra.test(txtApellido.value)) {
+                valido = false;
+                mensaje = "Solo puede ingresar letras";
+            }
+
+            if (txtCorreo.value === '') {
+                valido = false;
+                mensaje = "No ha ingresado el correo";
+            } else if (!letra.test(txtCorreo.value)) {
+                valido = false;
+                mensaje = "Solo puede ingresar letras";
+            }
+
+            if(texto==''){
+                valido = false;
+                mensaje = "El comentario esta vacio";
+            }
+               
+
+           
+
+            if (!valido)
+                alert(mensaje);
+
+            return valido;
+        }
+        </script>
+
+</html>

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marquez Jean</title>
+    <link rel="stylesheet" href="css/style.css" />
+
+    <style>
+        .text-center{
+            text-align: center;
+        }
+        #galeriaFooter {
+            border-top: 1px solid #808080;
+            margin: 5px;
+            display: grid;
+            grid-template-columns: 18% 20% 20% 20%;
+        }
+
+        .elementoFooter {
+            list-style-type: none;
+            margin-top: 10px;
+            margin-left: 10px;
+            border-radius: 10px;
+            padding: 15px;
+        }
+
+        .elementoFooter li {
+            list-style-type: none;
+            margin-right: 220px;
+        }
+
+        .elementoFooter li a {
+            text-decoration: none;
+        }
+
+        .elementoFooter a:hover {
+            color: #adff2f;
+        }
+
+        #contenedorPrincipal {
+            display: grid;
+            /*grid-template-rows: 150px 250px 150px;/*no poner altura*/
+            grid-template-columns: 30% 33% 30% ;
+            grid-gap: 15px 20px;
+            /*distancia entre filas*/
+        }
+        .formulario:nth-child(1){
+            grid-row: 2;
+            grid-column: 2;
+        }
+        .formulario:nth-child(2){
+            grid-row: 3/4;
+            grid-column: 1/4;
+        }
+        .formulario:nth-child(3){
+            grid-row: 1/2;
+            grid-column: 1/4;
+        }
+        .formulario{
+            list-style-type: none;
+            margin-top: 10px;
+            margin-left: 10px;
+            border: 1px solid #808080;
+            border-radius: 10px;
+            padding: 15px;
+
+        }
+        .botones{
+            display: grid;
+            grid-template-columns: 60% 45%  ;
+            grid-gap: 15px 20px;
+        }
+        .mensajeError{
+            color:#ee0808;
+            font-size: 9px;
+        }
+        #imgPagos{
+            width: 588px;
+            height: 178px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h2>Olimpia</h2>
+        <nav class="nav">
+            <a href="GomezCristopher.html">Home</a>
+            <a href="RodriguezCharlie.html">Membresías</a>
+            <a href="MarquezJean.html">Productos</a>
+            <a href="PastuizacaWashington.html">Beneficios</a>
+            <a href="CoelloNayeli.html">Sedes</a>
+            <a href="TumbacoPaul.html">Contacto</a>
+        </nav>
+    </header>
+
+    <main>
+        <div id="contenedorPrincipal">
+            <div class ="formulario">
+                <form id="formContacto">
+                    <div>
+                        <label>Nombres:<br></label>
+                        <input type="text" name="nombres" id="nombres" class="formItem" style="width: 300px;"  />
+                    </div>
+                    <div>
+                        <label>Telefono:<br></label>
+                        <input type="text" name="telefono" id="telefono" class="formItem"  style="width: 300px;"/>
+                   
+                    </div>
+                    <div>
+                        <label>Direccion:<br></label>
+                        <input type="text" name="direccion" id="direccion" class="formItem" style="width: 300px;" />
+                    </div>
+                    <div>
+                        <label>Metodo de pago:<br></label>
+                        <select name="metodoPago" id="metodoPago" class="formItem" style="width: 200px;">
+                            <option value="0">Seleccione..</option>
+                            <option value="1">Paypal</option>
+                            <option value="2">Web Money</option>
+                            <option value="3">Visa</option>
+                            <option value="4">Mastecard</option>
+                            <option value="5">American Express</option>
+                            <option value="6">Discover</option>
+                            <option value="7">JCB</option>
+                        </select>
+    
+                    </div>
+                    <div>
+                        <label>Cuenta Bancaria:<br></label>
+                        <input type="text" name="ctaBanco" id="ctaBanco" class="formItem" style="width: 300px;"  />
+                    </div>
+                    <div>
+                        <label>Cvv:<br></label>
+                        <input type="text" name="cvv" id="cvv" class="formItem" style="width: 70px;" />
+                    </div>
+                    <div class="botones" >   
+                        <input type="submit" class="btn btn-primary" value="Enviar" style="width: 110px;">
+                        <input type="reset" class="btn btn-primary" value="Cancelar" style="width: 110px;">
+                    </div>
+                </form>
+                
+            </div>
+            <div class ="formulario">
+                <div class="text-center">
+                    <img src="img/metodosDePago.png" alt="metodosPago" id="imgPagos">
+                </div>
+            </div>
+            <div class ="formulario">
+                <div >
+                    <p>Para realizar la compra se necesita que registre una forma de pago. </p>
+                </div>
+            </div>
+        </div>
+
+
+        <footer>
+            <div id="galeriaFooter">
+                <div class="elementoFooter">
+                    <ul>
+                        <li><a href="GomezCristopher.html">Home</a></li>
+                        <li><a href="RodriguezCharlie.html">Membresías</a></li>
+                        <li><a href="MarquezJean.html">Productos</a></li>
+                        <li><a href="PastuizacaWashington.html">Beneficios</a></li>
+                        <li><a href="CoelloNayeli.html">Sedes</a></li>
+                        <li><a href="TumbacoPaul.html">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="elementoFooter">
+                    <ul>
+                        <li><a href="">Facebook</a></li>
+                        <li><a href="">Instagram</a></li>
+                        <li><a href="">Youtube</a></li>
+                    </ul>
+                </div>
+                <div class="elementoFooter">
+                    <address>
+                        +593 0989493833<br>
+                        olympiagym@gmail.com
+                    </address>
+                </div>
+            </div>
+        </footer>
+    </main>
+    <script type="text/javascript" src="js/CuentaBancaria.js" >
+    </script>
+</body>
+
+</html>

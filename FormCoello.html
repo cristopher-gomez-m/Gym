@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contactos</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <style>
+    div.Principal h1{
+        font-size: 40px;
+        color:#ffffff;
+        display: inline; 
+    }   
+    
+    label {
+            color: #000000;
+        }
+
+    .text-center{
+        text-align: center;
+    }     
+    .formularios{
+        border: 2px solid #ccc;
+        border-radius: 15px;
+        padding: 10px;
+        background: #f5f5f5;
+        width: 80%;
+        margin: 0 auto; /*para centrar*/
+    }
+
+    .formularios div, .botones{
+        padding: 5px;
+        text-align: center;
+    }
+    input.FormC[type=text], select{
+        display: inline-block;
+    }
+    body{
+        background-color: #000000 ;
+    }
+    input[type=reset] {
+       width: 15%;
+       background-color: #cc3c32;
+       color: #ffffff;
+       padding: 14px 20px;
+       margin: 8px 0;
+       border: none;
+       border-radius: 4px;
+       cursor: pointer;
+    } 
+    .Principal{
+      text-align: center;
+      background: #000000b3;
+      padding:25px;
+      height: 150px; 
+      font-size: 1.5em;
+    }
+    .mensajeError{
+    color:#ff0000;
+    font-size: 9px;
+    }
+
+   input.FormC, select{
+   border: 2px solid #000000;
+   background-image: linear-gradient(to right, pink, lightgreen);
+   }
+
+</style>
+</head>
+
+<body>
+    <header>
+        <h1 id="text">OLYMPIA</h1>
+        <nav class="nav">
+            <ul class="cont">
+            <li><a href="GomezCristopher.html">Home</a></li>
+            <li><a href="RodriguezCharlie.html">Membresías</a></li>
+            <li><a href="MarquezJean.html">Productos</a></li>
+            <li><a href="PastuizacaWashington.html">Beneficios</a></li>
+            <li><a href="CoelloNayeli.html">Sedes</a></li>
+            <li><a href="TumbacoPaul.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="Principal">
+        <h1><b>Califica nuestros servicios</b></h1>
+    </div>
+    <div class="formularios" name="myForm">
+        <form id="formCalidad" onsubmit="return validar()">
+            <div>
+              <label>Nombre:</label>
+              <input type="text" name="name" id="name" class="FormC" placeholder="Ingrese su nombre" />
+            </div>    
+            <div>
+                <label>Edad:</label>
+                <input type="text" id="age" name="age" class="FormC" placeholder="Ingrese su Edad" >
+            </div>
+            <div>
+                <label>Sede:</label>
+                    <select name="sedes" id="sedes" class="FormC">
+                        <option value="0">Seleccione..</option>
+                        <option value="1">Santo Domingo</option>
+                        <option value="2">Quito</option>
+                        <option value="3">Cuenca</option>
+                        <option value="4">Guayaquil</option>
+                        <option value="5">Durán</option>
+                        <option value="6">Esmeraldas</option>
+                        <option value="7">Samborondón</option>
+                    </select>
+            </div>
+            <div>
+                <label><b>¿Qué tal le pareció el servicio de nuestra sede?</b></label></br>
+                <label>
+                Muy malo <input type="checkbox" name="servicio1" value="1" id="servicio1"
+                    class="FormC serv principal" />
+                </label>
+                <label>
+                Malo <input type="checkbox" name="servicio2" value="2" id="servicio2"
+                    class="FormC serv secundario" />
+                </label>
+                <label>
+                Regular <input type="checkbox" name="servicio3" value="3" id="servicio3"
+                    class="FormC serv" />
+                </label>
+                <label>
+                Bueno <input type="checkbox" name="servicio4" value="4" id="servicio4"
+                    class="FormC serv " />
+                </label>
+                <label>
+                Excelente <input type="checkbox" name="servicio5" value="5" id="servicio5"
+                    class="FormC serv " />
+                </label>
+            </div>
+            <div>
+                <label><b>¿Cómo describiría nuestros productos?</b></label></br>
+                <label><input class="prod" id="G" type="radio" name="producto" id="p1" value="G" />Grandiosos</label>
+                <label><input class="prod" id="B" type="radio" name="producto" id="p2" value="B" />Buenos</label>
+                <label><input class="prod" id="N" type="radio" name="producto" id="p3" value="N" />Ni buenos ni malos</label>
+                <label><input class="prod" id="F" type="radio" name="producto" id="p4" value="F" />Generalmente funcionales</label>
+                <label><input class="prod" id="D" type="radio" name="producto" id="p4" value="D" />Defectuosos</label>
+            </div>
+            <div>
+                <label>Por favor. describa si hubo algún aspecto particular de la experiencia de nuestro servicio <br>que sobresaliera, o
+                    si tiene algún otro comentario o sugerencia, escríbala.</label><br>
+                <label><b>Comentarios</b></label> <br>
+                <textarea class="form-comment" id="texto" rows="4" cols="100" class="FormC"></textarea>
+              </div>  
+            <div class="botones">
+               <input type="submit" value="Enviar"/>
+               <input type="reset" value="Cancelar"/>
+            </div>
+        </form> 
+    </div>
+    
+    <script type="text/javascript">
+        let cont=0;
+        function validar(event) {
+        var valido = true;
+
+        var txtNombres = document.getElementById("name");
+        var txtEdad = document.getElementById("age");
+        var selectSede = document.getElementById("sedes");
+        var checkboxServ = document.getElementsByClassName("serv");
+        var radiosProducto = document.getElementsByName("producto");
+
+        var letra = /^[a-z ,.'-]+$/i;
+        var numreg = /^[0-9]{2}$/g;
+       
+       if (txtNombres.value === "") {
+           valido = false;
+           mensaje("Nombre es requerido", txtNombres);
+        } else if (!letra.test(txtNombres.value)) { 
+           valido = false;
+           mensaje("Nombre solo debe contener letras", txtNombres);
+        } else if (txtNombres.value.length > 20) {
+           valido = false;
+           mensaje("Nombre maximo 20 caracteres", txtNombres);
+        }
+
+        if (txtEdad.value ==="") {
+           valido = false;
+           mensaje("Edad es requerida", txtEdad);
+        } else if ( !numreg.test(txtEdad.value)){
+           valido = false;
+           mensaje("Edad debe ser numerico y debe contener dos dígitos", txtEdad);
+        } else if (txtEdad.value <='12'){
+           valido = false;
+           mensaje("Debe ser mayor de 12 años", txtEdad);
+        }
+        
+        if (selectSede.value === null || selectSede.value === '0') {
+        valido = false;
+        mensaje("Debe seleccionar una sede", selectSede);
+       }
+
+       let sel = false;  
+       for (let i = 0; i < checkboxServ.length; i++) {
+          if (checkboxServ[i].checked) {
+               cont++;
+               sel = true;
+            break;
+          }
+        }
+        if (!sel) {
+        valido = false;
+        mensaje("Debe seleccionar una opción sobre que cómo le pareció nuestro servicio", checkboxServ[0]);
+       }
+       else if (cont!==1) {
+        valido = false;
+        mensaje("Debe seleccionar solo una opción", checkboxServ[0]);
+        }
+
+        sel = false;
+          for (let i = 0; i < radiosProducto.length; i++) {
+             if (radiosProducto[i].checked) {
+                sel = true;
+                let res=radiosProducto[i].value;        
+                break;
+             }
+          }
+         if (!sel) {
+           valido = false;
+           mensaje("Debe seleccionar como describiría nuestros productos", radiosProducto[0]);
+         }
+       return valido;
+}
+  
+function mensaje(cadenaMensaje, elemento) {
+   window.alert(cadenaMensaje);
+   elemento.focus();
+
+}
+
+function limpiarMensajes() {
+    var mensajes = document.querySelectorAll(".mensajeError");
+    for (let i = 0; i < mensajes.length; i++) {
+        mensajes[i].remove();
+    }
+}
+</script>
+</body>
+</html>

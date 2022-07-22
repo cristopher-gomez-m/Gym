@@ -1,0 +1,195 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*:after,
+*::before {
+  box-sizing: border-box;
+}
+
+html{
+    box-sizing: border-box;
+    font-size: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #121212;
+    color: white;
+}
+
+header{
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-between;
+    padding: 16px;
+}
+
+
+
+a {
+    color: white;
+}
+
+
+
+main{
+    width: 100%;
+    display: block;
+    background-color:#121212;
+}
+main footer{
+    background-color: black;
+}
+
+  
+.nav a{
+    text-decoration: none;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.flex{
+    display: flex;
+    margin: 16px;
+    justify-content: center;
+}
+
+.text-center{
+    text-align: center;
+}
+
+ul{
+    display: table;
+    margin: 0 auto;
+}
+li{
+    width: 80%;
+    margin-left: 30px;
+}
+
+div[class="columna"]{
+    background-color: #F1F1F1;
+    border: 1px solid #333;
+    margin:10px;
+    padding: 20px;
+    border-radius: 5px;
+    color: black;
+}
+
+.btn{
+    background: #414141;
+    display: block;
+    padding: 10px;
+    color: #fff;
+    text-decoration: none;
+}
+
+#image{
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    font-size: 22px;
+}
+
+
+img{
+    height: 150px;
+    width: 150px;
+}
+
+.btn:hover{
+    background: #B0B0B0;
+    color: #414141;
+}
+
+.nav a:hover{
+    color: #00FFFF;
+}
+
+
+
+input[type=text], select {
+  width: 30%;
+  padding: 11px 20px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 15%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.for{
+  border-radius: 10px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  margin: 10px;
+}
+#f4{
+    text-align: center;
+ }
+
+header{
+    background-color: #121212;
+    color: white;
+    justify-content: space-between;
+    padding: 16px;
+    display: flex;
+    flex-direction: row;
+}
+#text{
+    text-align: left;
+    color: white;
+    font-size: 24px;
+}
+.nav{
+    list-style-type: none;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+.nav li{
+    display: inline;
+    list-style-type: none;
+    margin-left: 5px;
+    margin-right: 5px;
+    padding-bottom: 10px;
+}
+.nav a:hover{
+    color: #00FFFF;
+}
+.nav li a{
+    color: white;
+    text-decoration: none;
+}
+.beneficio h1{
+    margin-left: 20px;
+    padding:25px;
+    font-weight: 900;
+    font-size: 2.5em;
+}
+.beneficio p{
+    padding: 3px;
+    margin-left:45px;
+    width: 30%;
+}
+.beneficio img{
+    width: 250px;
+    height: 100px;
+    float: right;
+    margin-right:100px;
+}
+

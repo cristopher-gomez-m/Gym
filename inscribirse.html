@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>inscribirse</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <style>
+        label {
+            color: black;
+        }
+
+        .formulario {
+            text-align: center;
+        }
+
+        .for {
+            margin-left: 20%;
+            margin-right: 20%;
+        }
+
+        input[type="radio"]:not(:checked) {
+            background-color: #ffa000;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h2>OLYMPIA</h2>
+        <nav class="nav">
+            <a href="GomezCristopher.html">Home</a>
+            <a href="RodriguezCharlie.html">Membresías</a>
+            <a href="MarquezJean.html">Productos</a>
+            <a href="PastuizacaWashington.html">Beneficios</a>
+            <a href="CoelloNayeli.html">Sedes</a>
+            <a href="TumbacoPaul.html">Contacto</a>
+        </nav>
+    </header>
+    <footer>
+        <h2 id="f4">¿Quieres inscribirte?</h2>
+        <div class="for">
+            <form class="formulario">
+                <div>
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" placeholder="Esciba su nombre" name="nombre" id="nombre" />
+                </div>
+                <div>
+                    <label for="apellido">Nombre:</label>
+                    <input type="text" placeholder="Esciba su apellido" name="apellido" id="apellido" />
+                </div>
+                <div>
+                    <label for="estadoC">Elija un paquete</label>
+                    <select name="estadoC" id="estadoC">
+                        <option value="0">Seleccione..</option>
+                        <option value="1">Personal training</option>
+                        <option value="2">Boxeo</option>
+                        <option value="3">Plan Premium</option>
+                    </select>
+                </div>
+                <div>
+                    <label>Genero:</label>
+                    <label>
+                        <input class="gen" id="fem" type="radio" name="genero" id="g1" value="F" />Femenino </label>
+                    <label>
+                        <input class="gen" id="mas" type="radio" name="genero" id="g2" value="M" />Masculino
+                    </label>
+                    <label>
+                        <input class="gen" id="otro" type="radio" name="genero" id="g3" value="O" />Otro
+                    </label>
+                </div>
+                <div>
+                    <label>Que otros servicios desea escoger?:</label> </br>
+                    <label>
+                        Revisión con el nutricionista<input type="checkbox" name="suscripcion1" value="1"
+                            id="suscripcion1" class="formItem sus principal" />
+                    </label>
+                    <label>
+                        Acceso a suplementos alimenticios<input type="checkbox" name="suscripcion2" value="2"
+                            id="suscripcion2" class="formItem sus secundario" />
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        <input type="checkbox" name="suscripcion1" id="condiciones"
+                            class="formItem sus principal" />Acepto los términos y condiciones
+                    </label>
+                </div>
+                <input type="submit" value="Enviar" />
+            </form>
+        </div>
+    </footer>
+    <script src="js/validate.js"></script>
+</body>
+
+</html>
